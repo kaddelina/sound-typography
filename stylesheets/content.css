@@ -1,0 +1,476 @@
+*{ box-sizing: border-box;}
+html, body{ height: 100%;
+overflow-x: hidden;}
+
+
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: Helvetica;
+    src: url("../fonts/HelveticaRegular.ttf");
+}
+
+  
+@font-face {
+    font-weight: 300;
+    font-style: normal;
+    font-family: Helvetica;
+    src: url("../fonts/HelveticaLight.ttf");
+}
+
+@font-face {
+    font-weight: 300;
+    font-style: italic;
+    font-family: Helvetica;
+    src: url("../fonts/HelveticaLightItalic.ttf");
+}
+
+p, ul, li, ol, u, th, td, a{ 
+    font-family: 'Helvetica'; 
+}
+
+a{ 
+    font-family: 'Helvetica'; 
+    text-decoration: none;
+    color: black;
+}
+
+.preload {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+    transition: opacity 0.5s ease;
+    transition-delay: 0.2s;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border: 1px solid black;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.plus1, .plus2 {
+    width: 75px;
+    height: auto;
+    display: block;
+    position: absolute;
+    z-index: 9;
+    animation: plus1anim 2s ease-in-out infinite;
+}
+
+.plus2 {
+    animation: plus2anim 2s ease-in-out infinite;
+}
+
+.preload-finish {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes plus1anim {
+    0%{
+       transform: rotate(0deg);
+      }
+   100%{
+       transform: rotate(180deg);
+      }
+}
+
+@keyframes plus2anim {
+    0%{
+       transform: rotate(180deg);
+      }
+   100%{
+       transform: rotate(0deg);
+      }
+}
+
+.rock {
+    width: 16vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.rock img {
+    width: 100%;
+    height: 100%;
+}
+
+.manifest {
+    width: 17vw;
+    top: 2vw;
+    left: 7vw;
+}
+
+
+.products {
+    top: 15vw;
+    left: 30vw;
+}
+
+.book {
+    width: 13vw;
+    top: 4vw;
+    left: 60vw;
+}
+
+.anons {
+    width: 14vw;
+    top: 20vw;
+    left: 80vw;
+}
+
+
+.promo {
+    top: 35vw;
+    left: 5vw;
+}
+
+.contact {
+    top: 30vw;
+    left: 45vw;
+}
+
+.web {
+    top: 40vw;
+    left: 75vw;
+}
+
+.corner {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid black;
+    display: block;
+    position: absolute;
+}
+
+
+.lefttop {
+    top: 0px;
+    left: 0px;
+}
+
+.leftbottom {
+    bottom: 0px;
+    left: 0px;
+}
+
+.righttop{
+    right: 0px;
+    top: 0px;
+}
+
+.rightbottom{
+    right: 0px;
+    bottom: 0px;
+}
+
+.plus {
+    width: 4vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 48%;
+}
+
+.name {
+    display: block;
+    position: absolute;
+    left: 2vw;
+}
+
+.name p{
+    line-height: 1.7vw;
+}
+
+.plus img{
+    width: 100%;
+    height: 100%;
+}
+
+.top {
+    top: 0;
+    justify-content: center;
+}
+
+.bottom {
+    bottom: 0;
+    align-items: center;
+}
+
+.coloumn {
+    margin-left: 30vw;
+    width: 65vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 3vw;
+}
+
+.coloumn-item {
+    display: inline-block;
+    width: 14vw;
+    vertical-align: top;
+}
+
+.contact {
+    display: block;
+    position: absolute;
+}
+
+.vk {
+    cursor: pointer;
+    top: 7vw;
+    left: 15vw;
+}
+
+.email {
+    top: 15vw;
+    left: 35vw;
+}
+
+.adress {
+    top: 40vw;
+    left: 80vw;
+}
+
+.card {
+    display: block;
+    position: absolute;
+}
+
+.stickers {
+    width: 14vw;
+    top: 2vw;
+    left: 16vw;
+}
+
+.postcard {
+    width: 14vw;
+    height: auto;
+    top: 6vw;
+    left: 52vw;
+}
+
+.shirt{
+    width: 28vw;
+    height: auto;
+    top: 9vw;
+    left: 68vw;
+}
+
+.flag {
+    width: 28vw;
+    height: auto;
+    top: 23vw;
+    left: 2vw;
+}
+
+.disk {
+    width: 34vw;
+    height: auto;
+    top: 26vw;
+    left: 32vw;
+}
+
+.postcard img, .shirt img, .flag img, .disk img, .stickers img{
+    width: 100%;
+}
+
+.sticker_text {
+    width: 14vw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 16vw;
+    top: 19vw;
+}
+
+.postcard_text {
+    width: 14vw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 52vw;
+    top: 22.2vw;
+}
+
+.shirt_text {
+    width: 28vw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 68vw;
+    top: 44.2vw;
+}
+
+.flag_text {
+    width: 28vw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 2vw;
+    top: 44.2vw;
+}
+
+.disk_text {
+    width: 34vw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 32vw;
+    top: 48.8vw;
+}
+
+.add {
+    display: block;
+    height: 2vw;
+}
+
+.add img{
+    height: 100%;
+    width: 100%;
+}
+
+.cart {
+    position: absolute;
+    left: 2vw;
+    top: 19vw;
+}
+
+.cart a{
+    text-decoration: none;
+    color: black;
+}
+
+.book-cover{
+    box-shadow: 0 0 2vw rgb(207, 207, 207);
+}
+
+.book-cover img{
+    width: 28vw;
+}
+
+
+.cover_description {
+    position: absolute;
+    width: 55vw;
+    top: 8vw;
+    left: 20vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+
+
+.cover_description p{
+    color: black;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: none;
+    justify-content: center;
+}
+
+.error_modal {
+    position: relative;
+    margin: auto;
+    background-color: white;
+    width: 60vw;
+    height: 40vw;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    border-radius: 2%;
+    animation-name: popup;
+    animation-duration: 0.6s;
+}
+
+@keyframes popup {
+    from {top:-35vw; opacity: 0.8; transform: scale(0.3);}
+    to {top:0; opacity: 1; transform: scale(1);}
+}
+
+.error_modal_pic{
+    margin-left: 3vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40vw;
+    height: 30vw;
+}
+
+.listalka {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    align-items: center;
+}
+
+.pages {
+    width: 25vw;
+}
+
+.pages img{
+    width: 25vw;
+    height: auto;
+    box-shadow: 0 0 1vw rgb(207, 207, 207);
+}
+
+.backwards, .forwards {
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+table {
+    width: 60vw;
+    margin-left: 2vw;
+    margin-top: 3vw;
+    border-collapse: collapse;
+    position: relative;
+}
+
+th, td{
+    border: 1px solid black;
+    text-align: left;
+    padding: 1vw 1vw 0.2vw 1vw;
+}
+/* 
+th:last-child{
+    border-left: none; 
+}
+
+th:first-child{
+    border-left: none; 
+} */
+
+tr * {
+    border-top: none;
+    border-left: none; 
+    border-right: none; 
+}
+
+
+
