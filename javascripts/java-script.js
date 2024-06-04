@@ -6,6 +6,8 @@ window.addEventListener ('load', function(){
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    //ВЫВОД МОЛАЛЬНОГО ОКНА НА СТРАНИЦЕ С КОНТАКТАМИ
     let modal = document.querySelector(".modal");
     let vk = document.querySelector(".vk");
 
@@ -20,15 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
 
-
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('JavaScript loaded and DOM fully parsed'); // Debugging line
+        console.log('JavaScript loaded and DOM fully parsed');
         const images = document.querySelectorAll('.poster img');
         const descriptions = document.querySelectorAll('.book_description p');
         let currentIndex = 0;
     
         const updateContent = () => {
-            console.log('Updating content to index:', currentIndex); // Debugging line
+            console.log('Updating content to index:', currentIndex); 
             images.forEach((img, index) => {
                 img.classList.toggle('active', index === currentIndex);
             });
@@ -42,23 +42,20 @@ document.addEventListener("DOMContentLoaded", function() {
     
         if (nextButton && prevButton) {
             nextButton.addEventListener('click', () => {
-                console.log('Next button clicked'); // Debugging line
+                console.log('Next button clicked'); 
                 currentIndex = (currentIndex + 1) % images.length;
                 updateContent();
             });
     
             prevButton.addEventListener('click', () => {
-                console.log('Prev button clicked'); // Debugging line
+                console.log('Prev button clicked');
                 currentIndex = (currentIndex - 1 + images.length) % images.length;
                 updateContent();
             });
     
-            // Initialize the first item
             updateContent();
         } else {
-            console.error('Next or Prev button not found'); // Debugging line
+            console.error('Next or Prev button not found');
         }
     });
        
-
-});
