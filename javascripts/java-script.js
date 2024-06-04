@@ -6,8 +6,8 @@ window.addEventListener ('load', function(){
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var modal = document.querySelector(".modal");
-    var vk = document.querySelector(".vk");
+    let modal = document.querySelector(".modal");
+    let vk = document.querySelector(".vk");
 
     vk.onclick = function() {
         modal.style.display = "flex";
@@ -19,43 +19,46 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    let currentImageIndex = 0;
-    const images = [
-        "./img/book_cover.png",
-        "./img/page1.jpg",
-        "./img/page2.jpg",
-        "./img/page3.jpg",
-        "./img/page4.jpg",
-        "./img/page5.jpg",
-        "./img/page6.jpg",
-        "./img/page7.jpg",
-        "./img/page8.jpg",
-        "./img/page9.jpg",
-        "./img/page10.jpg",
-        "./img/page11.jpg",
-        "./img/page12.jpg",
-        "./img/page13.jpg",
-        "./img/page14.jpg",
-        "./img/page15.jpg",
-        "./img/page16.jpg",
-        "./img/page17.jpg",
-        "./img/page18.jpg",
-        "./img/page19.jpg",
-        "./img/page20.jpg",
-        "./img/page21.jpg",
-        "./img/page22.jpg"
-    ];
 
-    function changeImage(direction) {
-        currentImageIndex += direction;
-        if (currentImageIndex < 0) {
-            currentImageIndex = images.length - 1;
-        } else if (currentImageIndex >= images.length) {
-            currentImageIndex = 0;
-        }
-        document.getElementById('bookimage').src = images[currentImageIndex];
-    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('JavaScript loaded and DOM fully parsed'); // Debugging line
+        const images = document.querySelectorAll('.poster img');
+        const descriptions = document.querySelectorAll('.book_description p');
+        let currentIndex = 0;
     
+        const updateContent = () => {
+            console.log('Updating content to index:', currentIndex); // Debugging line
+            images.forEach((img, index) => {
+                img.classList.toggle('active', index === currentIndex);
+            });
+            descriptions.forEach((desc, index) => {
+                desc.classList.toggle('active', index === currentIndex);
+            });
+        };
+    
+        const nextButton = document.querySelector('.next');
+        const prevButton = document.querySelector('.prev');
+    
+        if (nextButton && prevButton) {
+            nextButton.addEventListener('click', () => {
+                console.log('Next button clicked'); // Debugging line
+                currentIndex = (currentIndex + 1) % images.length;
+                updateContent();
+            });
+    
+            prevButton.addEventListener('click', () => {
+                console.log('Prev button clicked'); // Debugging line
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateContent();
+            });
+    
+            // Initialize the first item
+            updateContent();
+        } else {
+            console.error('Next or Prev button not found'); // Debugging line
+        }
+    });
+       
+
 });
-
-

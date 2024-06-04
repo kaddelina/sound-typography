@@ -473,4 +473,56 @@ tr * {
 }
 
 
+.poster_description {
+    position: absolute;
+    width: 65vw;
+    top: 6vw;
+    left: 20vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
 
+.poster {
+    width: 28vw;
+    display: block;
+    box-shadow: 0 0 1vw rgb(207, 207, 207);
+}
+
+.poster img{
+    width: 100%;   
+}
+
+.arrows {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    align-items: center;
+}
+
+.next, .prev {
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+
+
+.poster img {
+    display: none;
+    width: 100%;
+}
+
+.poster img.active {
+    display: block;
+}
+
+.book_description p {
+    display: none;
+}
+
+.book_description p.active {
+    display: block;
+}
