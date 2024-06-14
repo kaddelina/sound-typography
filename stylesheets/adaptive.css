@@ -1,13 +1,103 @@
-@media screen and (min-width: 1921px) {
+@media screen and (min-width: 1920px) {
   
 }
 
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
+@media screen and (min-width: 1365px) and (max-width: 1919px) {
+    .manifest {
+        top: 4vw;
+    }
+    
+    .products {
+        top: 17vw;
+    }
+    
+    .book {
+        top: 6vw;
+    }
+    
+    .anons {
+        top: 22vw;
+    }
+    
+    
+    .promo {
+        top: 40vw;
+    }
+    
+    .contact {
+        top: 32vw;
+    }
+    
+    .web {
+        top: 47vw;
+    }
+
+    .cover_description {
+        top: 12vw;
+    }
+
+    .productdiv {
+        margin-top: 4vw;
+    }
+
+    .coloumn-item {
+        margin-top: 4vw;
+    }
+
+    .poster_description {
+        top: 10vw;
+    }
 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1440px) {
+@media screen and (min-width: 1365px) and (max-width: 1439px) {
 
+}
+
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+    .manifest {
+        width: 20vw;
+        top: 5vw;
+        left: 7vw;
+    }
+    
+    
+    .products {
+        width: 18vw;
+        top: 20vw;
+        left: 30vw;
+    }
+    
+    .book {
+        width: 15vw;
+        top: 7vw;
+        left: 60vw;
+    }
+    
+    .anons {
+        width: 16vw;
+        top: 23vw;
+        left: 80vw;
+    }
+    
+    
+    .promo {
+        width: 18vw;
+        top: 48vw;
+        left: 5vw;
+    }
+    
+    .contact {
+        width: 18vw;
+        top: 40vw;
+        left: 45vw;
+    }
+    
+    .web {
+        width: 18vw;
+        top: 55vw;
+        left: 75vw;
+    }
 }
 
 
