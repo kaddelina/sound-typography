@@ -22,6 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     element.style.left = `${e.clientX - offsetX}px`;
                     element.style.top = `${e.clientY - offsetY}px`;
                     hasMoved = true;
+
+                    // Создание элемента следа
+                    const trail = document.createElement('div');
+                    trail.classList.add('trail');
+                    trail.style.left = `${e.clientX - offsetX}px`;
+                    trail.style.top = `${e.clientY - offsetY}px`;
+                    document.body.appendChild(trail);
+
+                    console.log('Creating trail at', e.clientX - offsetX, e.clientY - offsetY);
                 }
             };
 

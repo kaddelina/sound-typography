@@ -108,7 +108,7 @@ a{
     height: auto;
     display: block;
     position: absolute;
-    cursor: move;
+    cursor: crosshair;
     z-index: 5;
 }
 
@@ -159,6 +159,24 @@ a{
 .web {
     top: 40vw;
     left: 75vw;
+}
+
+.trail {
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    background-image: url("../img/chalk.png");
+    background-size: no-repeat;
+    background-size: cover;
+    z-index: 4;
+    opacity: 0.5;
+    animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
 }
 
 .corner {
@@ -456,7 +474,7 @@ a{
 }
 
 .pages img{
-    width: 40vw;
+    width: 100%;
     height: auto;
     display: none;
     box-shadow: 0 0 1vw rgb(225, 225, 225);
@@ -579,7 +597,7 @@ tr * {
 }
 
 
-
+/* 
 @keyframes fall {
     from {
         transform: translateY(-100vh);
@@ -601,7 +619,7 @@ tr * {
 @keyframes popup {
     from {top:-35vw;}
     to {bottom: 0;}
-}
+} */
 
 select, input {
     display: block;
